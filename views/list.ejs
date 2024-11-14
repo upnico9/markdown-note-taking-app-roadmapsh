@@ -1,0 +1,20 @@
+
+<h1>Files List</h1>
+
+<% if (typeof files !== 'undefined' && files.length > 0) { %>
+    <% files.forEach(function(file) { %>
+        <div class="file-container">
+            <h3><%= file %></h3>
+            <form action="/check/<%= file %>" method="get" style="display: inline;">
+                <button class="button" type="submit">Check Grammar</button>
+            </form>
+            <form action="/html/<%= file %>" method="get" style="display: inline;">
+                <button class="button" type="submit">Show html</button>
+            </form>
+        </div>
+    <% }); %>
+<% } else { %>
+    <p>No files found.</p>
+<% } %>
+
+

@@ -1,0 +1,9 @@
+
+<p>Upload your markdown files and view them in HTML format</p>
+<% if (typeof message !== 'undefined') { %>
+    <p><%= message %></p>
+<% } %>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="markdown" />
+    <input type="submit" value="Upload" />
+</form>
